@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{%  block content %}
+<div class="container-fluid text-center block-text" ,
+    style=" background-image:linear-gradient(to bottom, #17a2b8 , #005960);">
+    {{title}}
+</div>
+
+<div class="container-fluid py-5" style="overflow-wrap: break-word; background-color: #005960;">
+    <div class="pb-2" style="text-align: center;">
+        <p class="text-white">Contact us and we'll get back to you within 24 hours.</p>
+    </div>
+    <form class="text-center" action="" method="POST" onsubmit="alert('Thank You for your feedback.')">
+        <div class="form-group d-inline-block pl-2 pr-2">
+            <input type="text" name="name" id="name" placeholder="Name" class="form-control-for-input-contact-us">
+        </div>
+        <div class="form-group d-inline-block">
+            <input type="email" name="email" id="email" placeholder="email@example.com"
+                class="form-control-for-input-contact-us" required><br>
+        </div>
+        <div class="form-group d-block">
+            <textarea name="comment" id="comment" rows="4" placeholder="Comments"
+                class="col-md-5 form-control-for-textarea" required></textarea><br>
+        </div>
+        <div class="text-center">
+            <button class="btn ml-4" id="button" name="task" type="submit" value="Send"> Send </button>
+        </div>
+    </form>
+</div>
+{%  endblock content %}

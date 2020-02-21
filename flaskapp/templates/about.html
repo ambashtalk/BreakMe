@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+
+{%  block content %}
+<div class="container-fluid text-center block-text" ,
+    style=" background-image:linear-gradient(to bottom, #17a2b8 , #005960);">
+    {{title}}
+</div>
+<div class="container-fluid text-white" style="overflow-wrap: break-word; background-color: #005960;">
+    <div>
+        <br>
+        <div class="row text-center">
+            <div class="col-sm-4 text-center" style="height: 200px; width: 180px; margin: auto;">
+                <img class="img-fluid img-thumbnail" style="width: 180px; height: auto;"
+                    src="{{ url_for('static',filename='img/lohitya.jpg') }}">
+            </div>
+            <div class="col-sm-8">
+                <div class="row pb-2 pl-1" style="margin: auto;">
+                    Lohitya Kumar Ambashta - Web Developer
+                </div>
+                <!-- <div class="row">
+                    <div class="col-sm-1">
+                        <img class="fa-ico rounded-cirlce" src="../static/img/location1.jfif">
+                    </div>
+                    <div class="col-sm-11"><a href="https://www.google.com/maps/place/Rabindralaya/@26.7174867,88.4341391,17z/data=!3m1!4b1!4m5!3m4!1s0x39e44174b32c52d5:0xf29a41f0a1a72f83!8m2!3d26.7174867!4d88.4363278">Flat T2, Rabindralaya Apartment, 110/3 R.R.M.Roy Road, Siliguri, West Bengal, India</a></div>
+                </div> -->
+                <div class="row pb-2 pl-3">
+                    <span><img class="fa-ico rounded-cirlce"
+                            src="{{ url_for('static',filename='img/telephone.png') }}"></span>
+                    <a href="tel:+919476293140" class="text-color-white pl-1">+91-9476293140</a>
+                </div>
+                <div class="row pb-2 pl-3">
+                    <span><img class="fa-ico rounded-cirlce"
+                            src="{{ url_for('static',filename='img/email.png') }}"></span>
+                    <a href="mailto:ambashtalk@gmail.com" class="text-color-white pl-1">ambashtalk@gmail.com</a>
+                </div>
+                <div class="row pb-2 pl-3">
+                    <img class="fa-ico rounded-cirlce" src="{{ url_for('static',filename='img/github.svg') }}">
+                    <a target="blank" href="https://github.com/ambashtalk"
+                        class="text-color-white pl-1">github.com/ambashtalk</a>
+                </div>
+                <div class="row pb-2 pl-3">
+                    <img class="fa-ico rounded-cirlce" src="{{ url_for('static',filename='img/linkedin.png') }}">
+                    <a target="blank" href="https://www.linkedin.com/in/ambashtalk/"
+                        class="text-color-white pl-1">linkedin.com/in/ambashtalk</a>
+                </div>
+            </div>
+        </div>
+        <br><br><br>
+        <div class="row text-center pb-5">
+            <div class="col-sm-4 text-center" style="height: 200px; width: 180px; margin: auto;">
+                <img class="img-fluid img-thumbnail" style="width: 180px; height: auto;"
+                    src="{{ url_for('static',filename='img/kunal.jpg') }}">
+            </div>
+            <div class="col-sm-8">
+                <div class="row pb-2 pl-1" style="margin: auto;">
+                    Kunal Saraf - An Enthusiast Programmer
+                </div>
+                <!-- <div class="row">
+                    <div class="col-sm-1">
+                        <img class="fa-ico rounded-cirlce" src="../static/img/location1.jfif">
+                    </div>
+                    <div class="col-sm-11"><a href="https://www.google.com/maps/place/Rabindralaya/@26.7174867,88.4341391,17z/data=!3m1!4b1!4m5!3m4!1s0x39e44174b32c52d5:0xf29a41f0a1a72f83!8m2!3d26.7174867!4d88.4363278">Flat T2, Rabindralaya Apartment, 110/3 R.R.M.Roy Road, Siliguri, West Bengal, India</a></div>
+                </div> -->
+                <div class="row pb-2 pl-3">
+                    <img class="fa-ico rounded-cirlce" src="{{ url_for('static',filename='img/telephone.png') }}">
+                    <a href="tel:+919711394902" class="text-color-white pl-1">+91-9711394902</a>
+                </div>
+                <div class="row pb-2 pl-3">
+                    <img class="fa-ico rounded-cirlce" src="{{ url_for('static',filename='img/email.png') }}">
+                    <a href="mailto:saraffkunal@gmail.com" class="text-color-white pl-1">saraffkunal@gmail.com</a>
+                </div>
+                <div class="row pb-2 pl-3">
+                    <img class="fa-ico rounded-cirlce" src="{{ url_for('static',filename='img/github.svg') }}">
+                    <a target="blank" href="https://github.com/kunalsaraf"
+                        class="text-color-white pl-1">github.com/kunalsaraf</a>
+                </div>
+                <div class="row pb-2 pl-3">
+                    <img class="fa-ico rounded-cirlce" src="{{ url_for('static',filename='img/linkedin.png') }}">
+                    <a target="blank" href="https://www.linkedin.com/in/kunalsaraf/"
+                        class="text-color-white pl-1">linkedin.com/in/kunalsaraf</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{%  endblock content %}

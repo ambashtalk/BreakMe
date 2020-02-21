@@ -1,0 +1,107 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container-fluid text-center block-text" ,
+    style=" background-image:linear-gradient(to bottom, #17a2b8 , #005960);">
+    {{title}}
+</div>
+<div class="container-fluid">
+    <div class="row ">
+        <form action="/caesar" class="col-sm-12 bg-cipher1" method="POST">
+            <div class="form-group">
+                <label for="original-text" class="text-color-white pt-2 pb-1">Your Text:</label>
+                <textarea class="form-control" rows="5" id="original-text" name="original-text">{{ msg }}</textarea>
+            </div>
+            <div class="border mt-4 mb-4 pt-2 pb-2"
+                style="padding-left: inherit; border-radius: 10px; border-width: 3px !important;">
+                <div class="form-check">
+                    <label class="form-check-label text-color-white">
+                        {% if set1 == 'opt1' %}
+                        <input type="radio" class="form-check-input" name="set1" value="opt1" checked>Keep all special
+                        characters
+                        {% else %}
+                        <input type="radio" class="form-check-input" name="set1" value="opt1">Keep all special
+                        characters
+                        {% endif %}
+                    </label><br>
+                    <label class="form-check-label text-color-white">
+                        {% if set1 == 'opt2' %}
+                        <input type="radio" class="form-check-input" name="set1" value="opt2" checked>Remove all special
+                        characters but leave spaces
+                        {% else %}
+                        <input type="radio" class="form-check-input" name="set1" value="opt2">Remove all special
+                        characters but leave spaces
+                        {% endif %}
+                    </label><br>
+                    <label class="form-check-label text-color-white">
+                        {% if set1 == 'opt3' %}
+                        <input type="radio" class="form-check-input" name="set1" value="opt3" checked>Remove all special
+                        characters including spaces
+                        {% else %}
+                        <input type="radio" class="form-check-input" name="set1" value="opt3">Remove all special
+                        characters including spaces
+                        {% endif %}
+                    </label>
+                </div>
+            </div>
+
+            <div class="border mt-4 mb-4 pt-2 pb-2"
+                style="padding-left: inherit; border-radius: 10px; border-width: 3px !important;">
+                <div class="form-check">
+                    <label class="form-check-label text-color-white">
+                        {% if set2 == 'opt4' %}
+                        <input type="radio" class="form-check-input" name="set2" value="opt4" checked>Do not alter the
+                        case of output
+                        {% else %}
+                        <input type="radio" class="form-check-input" name="set2" value="opt4">Do not alter the case of
+                        output
+                        {% endif %}
+                    </label><br>
+                    <label class="form-check-label text-color-white">
+                        {% if set2 == 'opt5' %}
+                        <input type="radio" class="form-check-input" name="set2" value="opt5" checked>Convert the output
+                        to uppercase
+                        {% else %}
+                        <input type="radio" class="form-check-input" name="set2" value="opt5">Convert the output to
+                        uppercase
+                        {% endif %}
+                    </label><br>
+                    <label class="form-check-label text-color-white">
+                        {% if set2 == 'opt6' %}
+                        <input type="radio" class="form-check-input" name="set2" value="opt6" checked>Convert the output
+                        to lowercase
+                        {% else %}
+                        <input type="radio" class="form-check-input" name="set2" value="opt6">Convert the output to
+                        lowercase
+                        {% endif %}
+                    </label>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <div class="form-group">
+                    <label for="shift" class="text-color-white">Shift =</label>
+                    <select class="form-control-1" id="shift" name="shift">
+                        <option>{{shift}}</option>
+                        {% for i in range(0,26) %}
+                        {% if shift != i|string %}
+                        <option>{{i}}</option>
+                        {% endif %}
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button class="btn mr-4" name="task" type="submit" value="encrypt"> Encrypt </button>
+                <button class="btn ml-4" name="task" type="submit" value="decrypt"> Decrypt </button>
+            </div>
+            <div class="form-group">
+                <label for="output-text" class="text-color-white">Output: </label>
+                <textarea class="form-control" rows="5" id="output-text" name="output-text"
+                    readonly>{{ output }}</textarea>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock content %}
